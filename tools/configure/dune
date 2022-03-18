@@ -1,5 +1,6 @@
 (library
  (name conf)
+ (libraries unix str)
  (modules :standard \ configure))
 
 (executable
