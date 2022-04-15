@@ -43,7 +43,7 @@ let drop_setup () =
                           then CErrors.user_err Pp.(str ("Could not load plugin "^f))
                         );
              add_dir  = Topdirs.dir_directory;
-             ml_loop  = (fun () -> Toploop.loop ppf);
+             ml_loop  = (fun () -> Topcommon.load_topdirs_signature (); Toploop.loop ppf);
            })
 
 (* Main coqtop initialization *)
